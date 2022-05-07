@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+    --text-fill: yellow;
+    --line-fill: white;
+}
+
+@keyframes background-design {
+
+    0% {
+        background-color: yellow;
+    }
+
+    15% {
+        background-color: white;
+    }
+
+    30% {
+        background-color: black;
+    }
+
+    45% {
+        background-color: blue;
+    }
+
+    60% {
+        background-color: green;
+    }
+
+    75% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: yellow;
+    }
+}
+
+@keyframes btn-design {
+
+    0% {
+        background-color: blue;
+    }
+
+    15% {
+        background-color: white;
+    }
+
+    30% {
+        background-color: yellow;
+    }
+
+    45% {
+        background-color: red;
+    }
+
+    60% {
+        background-color: white;
+    }
+
+    75% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+@keyframes btnborder-design {
+
+    50% {
+        border: 2px solid black;
+    }
+    100% {
+        border: 2px solid rgb(247, 218, 218);
+    }
+}
+
+@keyframes number-design {
+
+    0% {
+       text-shadow: 5px 6px 3px rgb(255, 0, 0);
+    }
+
+    15% {
+       text-shadow: 5px 6px 3px red;
+    }
+
+    30% {
+       text-shadow: 5px 6px 3px black;
+    }
+
+    45% {
+       text-shadow: 5px 6px 3px rgb(128, 0, 64);
+    }
+
+    60% {
+       text-shadow: 5px 6px 3px blueviolet;
+    }
+
+    75% {
+       text-shadow: 5px 6px 3px rgb(0, 204, 255);
+    }
+
+    100% {
+       text-shadow: 5px 6px 3px black;
+    }
+}
+
+@keyframes num-design {
+
+    0% {
+        text-indent: 2px;
+    }
+
+    15% {
+        text-indent: 4px;
+    }
+
+    30% {
+        text-indent: 6px;
+    }
+
+    45% {
+        text-indent: 8px;
+    }
+
+    60% {
+        text-indent: 10px;
+    }
+
+    75% {
+        text-indent: 12px;
+    }
+
+    100% {
+        text-indent: 13px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+
+body {
+    background-color: yellow;
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    overflow: hidden;
+    background-image: url('mtn.jpg');
+    /*https: //pin.it/5imNfX8*/
+    background-repeat: no-repeat;
+    /* animation effect */
+    animation-name: background-design;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
+    animation-fill-mode: both;
+}
+
+.container {
+    text-align: center;
+    /* border: 2px solid red;   */
+    position: relative;
+    margin: 35% 0% 0% 70%;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-container::before {
+    content: '';
+    background-color: var(--line-fill);
+    position: absolute;
+    top:36%;
+    left:14%;
+    transform: translateY(-50%);
+    z-index: -1;
+    width: 72%;
+    height: 4px;
+}
+
+.progress {
+    background-color: rgb(4, 0, 255);
+    position: absolute;
+    top:24%;
+    left: 9%;
+    transform: translateY(-50%);
+    z-index: -1;
+    width: 0%;
+    height: 4px;
+    transition: 0.4s ease;
+}
+
+.circle {
+    background-color: var(--text-fill);
+    color: black;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-fill);
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    /* animation effect */
+    animation-name: number-design, num-design;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
+    animation-fill-mode: both;
+}
+
+.circle.active {
+    border-color: rgb(4, 0, 255);
+}
+
+.btn {
+    background-color: var(--line-fill);
+    color: black;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    margin: 5px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#next {
+    /* animation effect */
+    animation-name: btn-design, btnborder-design;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
+    animation-fill-mode: both;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:disabled {
+    background-color: rgb(211, 211, 211);
+    cursor: not-allowed;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 375px) {
+    * {
+      box-sizing: border-box;
+       margin: 10px;
+    }
+
+    body {
+        background-image: url('mtnf.jpg');
+    }
+
+    .container {
+        position: relative;
+        bottom: 90px;
+        right: 200px
+    }
+
+    .progress-container::before {
+        content: '';
+        background-color: var(--line-fill);
+        position: absolute;
+        top: 31.5%;
+        left: 14%;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 72%;
+        height: 4px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+    body {
+        background-image: url('mtnc.jpg');
+    }
+
+    .container {
+        position: relative;
+        top: 200px;
+        right: 160px;
+    }
+
+    .progress-container::before {
+        content: '';
+        background-color: var(--line-fill);
+        position: absolute;
+        top: 36%;
+        left: 14%;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 72%;
+        height: 4px;
+    }
+}
+
+@media only screen and (max-width: 425px) and (min-width: 400px) {
+    body {
+        background-image: url('mtnd.jpg');
+    }
+
+    .container {
+        position: relative;
+        bottom: 150px;
+        right: 250px
+    }   
+
+    .progress-container::before {
+        content: '';
+        background-color: var(--line-fill);
+        position: absolute;
+        top: 36%;
+        left: 14%;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 72%;
+        height: 4px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    body {
+        background-image: url('mtne.jpg');
+    }
+
+    .container {
+        position: relative;
+        top: 100px;
+        right: 150px
+    }
+
+    .progress-container::before {
+        content: '';
+        background-color: var(--line-fill);
+        position: absolute;
+        top: 35.9%;
+        left: 14%;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 72%;
+        height: 4px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/* Extra extra large devices (large laptops and desktops, 1800px and up) */
+ @media only screen and (min-width: 2500px) {
+    .container {
+        margin-top: 250px;
+    }
+
+} 
