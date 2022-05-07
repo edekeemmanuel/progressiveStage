@@ -264,8 +264,37 @@ body {
     cursor: not-allowed;
 }
 
+@media only screen and (max-width: 320px) {
+    * {
+        box-sizing: border-box;
+        margin: 30px 10px 20px 10px ;
+    }
+
+    body {
+        background-image: url('mtng.jpg');
+    }
+
+    .container {
+        position: relative;
+        bottom: 150px;
+        right: 200px
+    }
+
+    .progress-container::before {
+        content: '';
+        background-color: var(--line-fill);
+        position: absolute;
+        top: 40.1%;
+        left: 14%;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 72%;
+        height: 4px;
+    }
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) and (min-width: 321px) {
     * {
       box-sizing: border-box;
        margin: 10px;
@@ -286,6 +315,31 @@ body {
         background-color: var(--line-fill);
         position: absolute;
         top: 31.5%;
+        left: 14%;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 72%;
+        height: 4px;
+    }
+}
+
+
+@media only screen and (max-width: 425px) and (min-width: 376px) {
+    body {
+        background-image: url('mtnd.jpg');
+    }
+
+    .container {
+        position: relative;
+        bottom: 150px;
+        right: 250px
+    }
+
+    .progress-container::before {
+        content: '';
+        background-color: var(--line-fill);
+        position: absolute;
+        top: 36%;
         left: 14%;
         transform: translateY(-50%);
         z-index: -1;
@@ -320,29 +374,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 425px) and (min-width: 400px) {
-    body {
-        background-image: url('mtnd.jpg');
-    }
 
-    .container {
-        position: relative;
-        bottom: 150px;
-        right: 250px
-    }   
-
-    .progress-container::before {
-        content: '';
-        background-color: var(--line-fill);
-        position: absolute;
-        top: 36%;
-        left: 14%;
-        transform: translateY(-50%);
-        z-index: -1;
-        width: 72%;
-        height: 4px;
-    }
-}
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
     body {
