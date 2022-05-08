@@ -264,14 +264,14 @@ body {
     cursor: not-allowed;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 350px) {
     * {
         box-sizing: border-box;
         margin: 30px 10px 20px 10px ;
     }
 
     body {
-        background-image: url('mtng.jpg');
+        background-image: url('mtnh.jpg');
     }
 
     .container {
@@ -294,7 +294,7 @@ body {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 375px) and (min-width: 321px) {
+@media only screen and (max-width: 375px) and (min-width: 351px) {
     * {
       box-sizing: border-box;
        margin: 10px;
@@ -324,7 +324,38 @@ body {
 }
 
 
-@media only screen and (max-width: 425px) and (min-width: 376px) {
+/* my phone pixel */
+/* @media only screen and (max-width: 385px) and (min-width: 376px) {
+    * {
+        box-sizing: border-box;
+        margin: 10px;
+    }
+
+    body {
+        background-image: url('mtnf.jpg');
+    }
+
+    .container {
+        position: relative;
+        bottom: 90px;
+        right: 200px
+    }
+
+    .progress-container::before {
+        content: '';
+        background-color: var(--line-fill);
+        position: absolute;
+        top: 31.5%;
+        left: 14%;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 72%;
+        height: 4px;
+    }
+} */
+
+
+@media only screen and (max-width: 425px) and (min-width: 375px) {
     body {
         background-image: url('mtnd.jpg');
     }
@@ -332,7 +363,7 @@ body {
     .container {
         position: relative;
         bottom: 150px;
-        right: 250px
+        right: 270px
     }
 
     .progress-container::before {
@@ -357,7 +388,7 @@ body {
 
     .container {
         position: relative;
-        top: 200px;
+        top: 190px;
         right: 160px;
     }
 
@@ -383,7 +414,7 @@ body {
 
     .container {
         position: relative;
-        top: 100px;
+        top: 80px;
         right: 150px
     }
 
@@ -408,8 +439,8 @@ body {
 
 /* Extra extra large devices (large laptops and desktops, 1800px and up) */
  @media only screen and (min-width: 2500px) {
-    .container {
+    /* .container {
         margin-top: 250px;
-    }
+    } */
 
 } 
